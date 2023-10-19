@@ -8,6 +8,7 @@ import Adicionar from './Home/Adicionar';
 import Header from './componentes/Header';
 import styled from 'styled-components/native';
 import Plus from './Home/Plus';
+import Config from './Home/Config';
 
 function HomeScreen() {
   return (
@@ -82,11 +83,12 @@ export default function App() {
         <Tab.Screen name="Novo" component={Plus} options={{headerShown:false,tabBarIcon: ({ }) => (
                 <Novo/>
               )}} />
-        <Tab.Screen name="Settings" component={SettingsScreen} options={{headerShown:false,tabBarIcon: ({ }) => (
+        <Tab.Screen name="Settings" component={Config} options={{headerShown:false,tabBarIcon: ({ }) => (
                 <ImageHome source={require("./componentes/icones/menu.png")}/>
               )}} />
       </Tab.Navigator>
     </NavigationContainer>
+    
 
     </View>
     </>

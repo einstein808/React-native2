@@ -4,7 +4,12 @@ import styled from 'styled-components/native';
 
 const DB = [
   { id: 1, valor: "22", categoria: "Comida", data: "22/10/2023" },
-  { id: 2, valor: "22", categoria: "Comida", data: "22/10/2023" }
+  { id: 2, valor: "22", categoria: "Comida", data: "22/10/2023" },
+  { id: 3, valor: "22", categoria: "Comida", data: "22/10/2023" },
+  { id: 4, valor: "22", categoria: "Comida", data: "22/10/2023" },
+  { id: 5, valor: "22", categoria: "Comida", data: "22/10/2023" },
+  { id: 6, valor: "22", categoria: "Comida", data: "22/10/2023" },
+  { id: 7, valor: "22", categoria: "Comida", data: "22/10/2023" }
 ];
 const Card = styled.View`
     width: 60%;
