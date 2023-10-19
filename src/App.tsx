@@ -1,11 +1,13 @@
 import * as React from 'react';
-import {Text, View} from 'react-native';
+import {Image, Text, View} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Home from './Home/Home';
 import Novo from './componentes/Novo';
 import Adicionar from './Home/Adicionar';
 import Header from './componentes/Header';
+import styled from 'styled-components/native';
+import Plus from './Home/Plus';
 
 function HomeScreen() {
   return (
@@ -22,7 +24,10 @@ function SettingsScreen() {
     </View>
   );
 }
-
+const ImageHome = styled.Image`
+  width:40px;
+  height: 40px;
+`
 const Tab = createBottomTabNavigator();
 const tabBarOptions = {
   tabBarActiveTintColor: 'white', // Define a cor do ícone ativo como branca
@@ -71,11 +76,15 @@ export default function App() {
               
           },
         }}>
-        <Tab.Screen name="Home" component={Home} options={{headerShown:false}} />
-        <Tab.Screen name="Novo" component={Adicionar} options={{headerShown:false,tabBarIcon: ({ }) => (
+        <Tab.Screen name="Home" component={Home} options={{headerShown:false,tabBarIcon: ({ }) => (
+                <ImageHome source={require("./componentes/icones/home2.png")}/>
+              )}} />
+        <Tab.Screen name="Novo" component={Plus} options={{headerShown:false,tabBarIcon: ({ }) => (
                 <Novo/>
               )}} />
-        <Tab.Screen name="Settings" component={SettingsScreen} />
+        <Tab.Screen name="Settings" component={SettingsScreen} options={{headerShown:false,tabBarIcon: ({ }) => (
+                <ImageHome source={require("./componentes/icones/menu.png")}/>
+              )}} />
       </Tab.Navigator>
     </NavigationContainer>
 

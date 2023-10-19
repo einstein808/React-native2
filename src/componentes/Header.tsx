@@ -12,10 +12,10 @@ const HedView = styled.View`
 const Grafico = styled.Image`
     width:30px;
     height: 30px;
-    margin-right: 10px
+    margin-right: 50px
 `
 const TextHeader = styled.Text`
-    margin-right:20px;
+    margin-right:40px;
 `
 export default function Header(){
     return(
@@ -24,6 +24,7 @@ export default function Header(){
             
             <TextHeader >Orçamento</TextHeader>
             <Grafico source={require("../componentes/icones/book.png")}/>
+            <TextHeader >Objetivos</TextHeader>
             </HedView>
     )
 }
