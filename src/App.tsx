@@ -16,11 +16,10 @@ const SplashScreen = () => {
   const [isLoading, setIsLoading] = useState(true);
   const fadeAnim = new Animated.Value(0);
   const AnimatedText = Animatable.Text;
-
   useEffect(() => {
     const fadeIn = Animated.timing(fadeAnim, {
       toValue: 1,
-      duration: 1100, // Ajuste a duração conforme necessário
+      duration: 1500, // Ajuste a duração conforme necessário
       easing: Easing.linear,
       useNativeDriver: true,
     });
@@ -53,7 +52,7 @@ const SplashScreen = () => {
           </Animated.View>
           <AnimatedText
             animation="fadeInRight"
-            duration={1000}
+            duration={700}
             style={{
               fontSize: 18,
               textAlign: 'center',
